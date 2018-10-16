@@ -1,10 +1,10 @@
 /* Add styles here */
 .body {
   font-family: fira sans;
-  background-image: img(img/background1.jpg);
+  background-image: url(../../img/backaground2.jpg);
 }
 
-.break {
+b .break {
   margin-left: 20px;
   margin-right: 20px;
 }

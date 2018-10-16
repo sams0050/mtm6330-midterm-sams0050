@@ -20,7 +20,8 @@ $bg-color: hsl(246, 55%, 60%);
     content: ' ';
     border-top: 2px solid $bg-color;
     position: absolute;
-    top: 0px width: 100%;
+    top: 0px;
+    width: 100%;
   }
 
   .logo {
@@ -71,47 +72,48 @@ $bg-color: hsl(246, 55%, 60%);
       border-color: lighten(desaturate($bg-color, 30%), 20%);
     }
   }
-}
-
-.body {
-  font-family: fira sans;
-  background-image: img(img/background1.jpg);
-}
-
-.break {
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-.article {
-  padding: 20px;
-  border: 500px rgb(231, 154, 154);
-}
-
-/*carousel */
-.carousel {
-  width: 80%;
-  padding: 20px;
-  align-items: center;
-}
-
-.carousel img {
-  width: 100%;
-}
-
-/* cards */
 
 
-.card {
-  margin: 20px;
-
-  .card-deck {
-    padding: 20px;
+  .body {
+    font-family: fira sans;
+    background-image: url(./../img/backaground2.jpg);
   }
 
-  .card-img-top {
-    max-width: auto;
+  .break {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 
-    border: 2px solid rgb(224, 152, 152);
+  .article {
+    padding: 20px;
+    border: 500px rgb(231, 154, 154);
+  }
+
+  /*carousel */
+  .carousel {
+    width: 80%;
+    padding: 20px;
+    align-items: center;
+  }
+
+  .carousel img {
+    width: 100%;
+  }
+
+  /* cards */
+
+
+  .card {
+    margin: 20px;
+
+    .card-deck {
+      padding: 20px;
+    }
+
+    .card-img-top {
+      max-width: auto;
+
+      border: 2px solid rgb(224, 152, 152);
+    }
   }
 }

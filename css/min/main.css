@@ -1,0 +1,103 @@
+/* Add styles here */
+.body {
+  font-family: fira sans;
+  background-image: img(img/background1.jpg);
+}
+
+.break {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.article {
+  padding: 20px;
+  border: 500px rgb(231, 154, 154);
+}
+
+.navbar {
+  align-items: center;
+  background-color: #4742DB;
+  border-bottom: 3px solid #4742DB;
+  display: flex;
+  height: 60px;
+}
+
+.navbar::before {
+  content: " ";
+  border-top: 2px solid #d69898;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+
+.navbar .logo {
+  flex-grow: 1;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  padding-left: 1rem;
+}
+
+.navbar .logo img {
+  height: calc(100% - 1.5rem);
+  width: auto;
+}
+
+.navbar .nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar .menu-item {
+  color: #ffffff;
+  flex-grow: 1;
+  letter-spacing: 0.5px;
+  text-align: center;
+  text-transform: uppercase;
+  align-items: center;
+  height: 60px;
+  line-height: 60px;
+  justify-content: center;
+  border-bottom: 2px solid transparent;
+}
+
+.navbar .menu-item:hover {
+  background-color: #be0000;
+  cursor: pointer;
+}
+
+.navbar .menu-item.active {
+  border-color: #fffb00;
+}
+
+/*carousel */
+.carousel {
+  width: 80%;
+  padding: 20px;
+  align-items: center;
+}
+
+.carousel img {
+  width: 100%;
+}
+
+/* cards */
+
+
+.card {
+  margin: 20px;
+}
+
+.card-deck {
+  padding: 20px;
+}
+
+/* card image */
+.card-img-top {
+  max-width: auto;
+
+  border: 2px solid rgb(224, 152, 152);
+}

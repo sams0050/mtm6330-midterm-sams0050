@@ -2,16 +2,13 @@
 // created a _base.scss that contains all the partial css and imported it here
 // the following is a global scope variablke while the ones inside the navbar
 // is applied to the navbar selector
-$bg-color: hsl(246, 55%, 60%);
+$bg-color: hsl(2, 92%, 47%);
+$height: 60px;
 
 /* Add styles here */
 .navbar {
-  // creating a variable for height to make it global throughout site
-  $height: 60px;
-  $brand-color: hsl(246, 55%, 60%);
-  // second variable color is the one that will be applied
   align-items: center;
-  background-color: hsl(0, 0%, 97%);
+  background-color: $bg-color;
   border-bottom: 3px solid hsl(0, 0%, 94%);
   display: flex;
   height: $height;
@@ -35,86 +32,88 @@ $bg-color: hsl(246, 55%, 60%);
       height: calc(100% - 1.5rem);
       width: auto;
     }
+  }
+}
 
+.nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.menu-item {
+  color: darken(desaturate($bg-color, 40%), 20%);
+  flex-grow: 1;
+  letter-spacing: 0.5px;
+  text-align: center;
+  text-transform: uppercase;
+  align-items: center;
+  height: $height;
+  // line height to center the text so we make full height of container
+  // will change when height of container changes
+  // therefore we'll create a variable to make sure changes are universal
+  line-height: $height;
+  justify-content: center;
+  border-bottom: 2px solid transparent;
+
+  // menu item .active is a class name in html while :hover is a pseudo class
+  &:hover {
+    background-color: hsl(234, 83%, 52%);
+    cursor: pointer;
   }
 
-
-  .nav {
-    flex-grow: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
+  &.active {
+    border-color: lighten(desaturate($bg-color, 30%), 20%);
   }
+}
 
-  .menu-item {
-    color: darken(desaturate($bg-color, 40%), 20%);
-    flex-grow: 1;
-    letter-spacing: 0.5px;
-    text-align: center;
-    text-transform: uppercase;
-    align-items: center;
-    height: $height;
-    // line height to center the text so we make full height of container
-    // will change when height of container changes
-    // therefore we'll create a variable to make sure changes are universal
-    line-height: $height;
-    justify-content: center;
-    border-bottom: 2px solid transparent;
+.body {
+  font-family: fira sans;
+  background-image: url(../../img/backaground2.jpg);
+}
 
-    // menu item .active is a class name in html while :hover is a pseudo class
-    &:hover {
-      $bg-color: hsl(0, 0%, 94%);
-      cursor: pointer;
-    }
+.break {
+  margin-left: 20px;
+  margin-right: 20px;
+}
 
-    &.active {
-      border-color: lighten(desaturate($bg-color, 30%), 20%);
-    }
-  }
+.article {
+  padding: 20px;
+  border: 500px rgb(231, 154, 154);
+}
 
+/*carousel */
+.carousel {
+  width: 80%;
+  padding: 20px;
+  align-items: center;
+}
 
-  .body {
-    font-family: fira sans;
-    background-image: url(./../img/backaground2.jpg);
-  }
+.carousel img {
+  width: 100%;
+}
 
-  .break {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
+/* cards */
 
-  .article {
+.card {
+  margin: 20px;
+  align-items: center;
+
+  .card-deck {
     padding: 20px;
-    border: 500px rgb(231, 154, 154);
   }
 
-  /*carousel */
-  .carousel {
-    width: 80%;
-    padding: 20px;
-    align-items: center;
+  .racers .card-img-top {
+    width: 200px;
+    height: 150px;
+    border: 2px solid rgb(224, 152, 152);
   }
+}
 
-  .carousel img {
-    width: 100%;
-  }
-
-  /* cards */
-
-
+@media screen and (max-width: 720px) {
   .card {
-    margin: 20px;
-    width: 400px;
-
-    .card-deck {
-      padding: 20px;
-    }
-
-    .card-img-top {
-      max-width: auto;
-
-      border: 2px solid rgb(224, 152, 152);
-    }
+    display: block;
   }
 }

@@ -38,6 +38,7 @@ article {
     content: ' ';
     border-top: 2px solid yellow;
     position: absolute;
+    left: 0px;
     top: 0px;
     width: 100%; }
   .navbar .logo {
@@ -73,6 +74,7 @@ a.texty {
   border-bottom: 2px solid transparent; }
   .menu-item:hover {
     background-color: #2e3ed1;
+    color: white;
     cursor: pointer; }
   .menu-item.active {
     border-color: #e8e87d;
@@ -87,6 +89,18 @@ ul {
 
 li {
   padding: 10px; }
+
+.history {
+  width: 60%;
+  color: white;
+  float: left;
+  text-align: center;
+  margin: 20px; }
+
+.vintage {
+  width: 30%;
+  float: right;
+  margin: 20px; }
 
 .break {
   margin-left: 20px;
@@ -108,19 +122,40 @@ li {
   background-color: 3px solid #3729ff;
   border-radius: 3%; }
 
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+  margin: 40px; }
+
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute; }
+
 /* cards */
+.card-deck {
+  max-width: 100%;
+  align-items: center;
+  margin: auto;
+  justify-content: center; }
+
 .card {
+  width: 20%;
   margin: 40px;
   padding: 10px;
   align-items: center;
   border-color: #afc7ee; }
   .card .racers {
-    width: 200px;
+    width: auto;
     height: 150px;
-    border: 2px solid #e6110a; }
+    border: 2px solid #e6110a;
+    border-radius: 4%; }
 
 .card-img-top {
-  height: 40%;
   border-bottom: 3px solid #3729ff; }
 
 .card-body {
@@ -130,15 +165,24 @@ li {
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .card-deck {
-    margin: 10px; }
+    max-width: 100%;
+    align-items: center;
+    margin: auto;
+    justify-content: center; }
+  .card-group {
+    overflow: hidden; }
   .card {
-    width: 800px;
-    height: 800px; } }
+    width: auto;
+    height: auto;
+    margin: 20px;
+    align-items: center;
+    justify-content: center; } }
 
 @media only screen and (max-width: 768px) {
-  .card-deck {
-    padding: 10px; }
   .card {
     width: 300px;
     height: 450px;
-    margin: auto; } }
+    margin: 10px;
+    align-items: center;
+    margin: auto;
+    justify-content: center; } }

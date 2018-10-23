@@ -46,7 +46,7 @@ $borders: 3px solid hsl(244, 100%, 58%);
 }
 
 a.texty {
-  color: white;
+  color: black;
 }
 
 .menu-item {
@@ -66,12 +66,13 @@ a.texty {
 
   // menu item .active is a class name in html while :hover is a pseudo class
   &:hover {
-    background-color: hsl(234, 41%, 85%);
+    background-color: hsl(234, 64%, 50%);
     cursor: pointer;
   }
 
   &.active {
     border-color: lighten(desaturate($active-color, 30%), 20%);
+    color: white;
   }
 }
 
@@ -104,10 +105,12 @@ li {
 
 /*carousel */
 .carousel {
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
   width: 75%;
+  height: auto;
   padding: 20px;
+  background-color: $borders;
+  border-radius: 3%;
 }
 
 /* cards */
@@ -116,7 +119,7 @@ li {
   margin: 40px;
   padding: 10px;
   align-items: center;
-  background-color: rgb(175, 199, 238);
+  border-color: rgb(175, 199, 238);
 
   .racers {
     width: 200px;
@@ -139,19 +142,24 @@ li {
 
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  .card-body {
-    width: 100%;
-    height: 300px;
-    overflow: scroll;
-    overflow-x: hidden;
+  .card-deck {
+    margin: 10px;
   }
 
+  .card {
+    width: 800px;
+    height: 800px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
-  .racers {
-    width: 400px;
-    height: 150px;
-    border: 2px solid $bg-color;
+  .card-deck {
+    padding: 10px;
+  }
+
+  .card {
+    width: 300px;
+    height: 450px;
+    margin: auto;
   }
 }

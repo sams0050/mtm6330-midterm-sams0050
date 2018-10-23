@@ -33,7 +33,6 @@ article {
   align-items: center;
   background-color: #e6110a;
   border-bottom: 3px solid #3729ff;
-  display: flex;
   height: 60px; }
   .navbar::before {
     content: ' ';
@@ -58,8 +57,11 @@ article {
   align-items: center;
   height: 100%; }
 
+a.texty {
+  color: white; }
+
 .menu-item {
-  color: white;
+  color: #666666;
   flex-grow: 1;
   letter-spacing: 0.5px;
   text-align: center;
@@ -70,7 +72,7 @@ article {
   justify-content: center;
   border-bottom: 2px solid transparent; }
   .menu-item:hover {
-    background-color: #293efa;
+    background-color: #c9cce8;
     cursor: pointer; }
   .menu-item.active {
     border-color: #e8e87d; }
@@ -79,32 +81,59 @@ body {
   font-family: fira sans;
   background-image: url(../../img/backaground2.jpg); }
 
+ul {
+  font-size: 20px; }
+
+li {
+  padding: 10px; }
+
 .break {
   margin-left: 20px;
   margin-right: 20px; }
 
 .article {
   padding: 20px;
-  border: 500px #e79a9a; }
+  border: 500px #e79a9a;
+  color: white;
+  font-size: 20px;
+  text-align: center; }
 
 /*carousel */
 .carousel {
-  width: 80%;
-  padding: 20px;
-  align-items: center; }
-
-.carousel img {
-  width: 100%; }
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  padding: 20px; }
 
 /* cards */
 .card {
-  margin: 10px;
-  align-items: center; }
-  .card .racers .card-img-top {
+  margin: 40px;
+  padding: 10px;
+  align-items: center;
+  background-color: #afc7ee; }
+  .card .racers {
     width: 200px;
     height: 150px;
-    border: 2px solid #e09898; }
+    border: 2px solid #e6110a; }
 
-@media screen and (max-width: 720px) {
-  .racers .card {
-    display: block; } }
+.card-img-top {
+  height: 40%;
+  border-bottom: 3px solid #3729ff; }
+
+.card-body {
+  width: 90%;
+  height: 300px;
+  overflow-x: hidden; }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .card-body {
+    width: 100%;
+    height: 300px;
+    overflow: scroll;
+    overflow-x: hidden; } }
+
+@media only screen and (max-width: 768px) {
+  .racers {
+    width: 400px;
+    height: 150px;
+    border: 2px solid #e6110a; } }

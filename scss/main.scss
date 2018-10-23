@@ -8,7 +8,7 @@ $active-color: rgb(255, 255, 0);
 $borders: 3px solid hsl(244, 100%, 58%);
 
 
-/* Add styles here */
+/* All nav stylings/logo/menu items */
 .navbar {
   align-items: center;
   background-color: $bg-color;
@@ -78,12 +78,13 @@ a.texty {
   }
 }
 
-
+/*body stylings */
 body {
   font-family: fira sans;
   background-image: url(../../img/backaground2.jpg);
 }
 
+/* list/unordered items on the homepage categories */
 ul {
   font-size: 20px;
 }
@@ -92,29 +93,57 @@ li {
   padding: 10px;
 }
 
-.history {
-
-  color: white;
-  text-align: center;
-  margin: 20px;
-  margin-bottom: 80px;
-  align-content: center;
-}
-
+/* line break on each page between content */
 .break {
   margin-left: 20px;
   margin-right: 20px;
 }
 
+
+/*main article on homepage*/
 .article {
   padding: 20px;
   border: 500px rgb(231, 154, 154);
   color: white;
   font-size: 20px;
   text-align: center;
+  margin-bottom: 60px;
 }
 
-/*carousel */
+/* history page */
+/*full body of hisory page*/
+.whatever {
+  margin: auto;
+  width: 75%;
+  height: auto;
+}
+
+/*history class for <p>*/
+.history {
+  color: white;
+  text-align: left;
+  margin: 20px;
+  align-content: left;
+}
+
+/*youtube inbedded videos on history page */
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+  margin: 20px;
+}
+
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 80%;
+  width: 80%;
+  position: absolute;
+}
+
+/*carousel bootstrap stlyings*/
 .carousel {
   margin: auto;
   width: 75%;
@@ -124,24 +153,9 @@ li {
   border-radius: 3%;
 }
 
-.video-responsive {
-  overflow: hidden;
-  padding-bottom: 56.25%;
-  position: relative;
-  height: 0;
-  margin: 40px;
 
-}
-
-.video-responsive iframe {
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-}
-
-/* cards */
+/* bootstrap cards */
+/*group of cards in a row*/
 .card-deck {
   max-width: 100%;
   align-items: center;
@@ -149,6 +163,7 @@ li {
   justify-content: center;
 }
 
+/*individual card*/
 .card {
   width: 20%;
   margin: 40px;
@@ -156,33 +171,30 @@ li {
   padding: 10px;
   align-items: center;
   border-color: rgb(175, 199, 238);
-
-  .racers {
-    width: auto;
-    height: 150px;
-    border: 2px solid $bg-color;
-    border-radius: 4%;
-  }
 }
 
+/*racer class for cards on racer page*/
+.racers {
+  width: auto;
+  height: 300px;
+  border: 2px solid $bg-color;
+  border-radius: 10%;
+}
+
+
+/*image at the tops of cards*/
 .card-img-top {
   border-bottom: 3px solid hsl(244, 100%, 58%);
 }
 
-
+/*content under the image on card*/
 .card-body {
   width: 90%;
   height: 300px;
   overflow-x: hidden;
 }
 
-.whatever {
-  margin: auto;
-  width: 80%;
-  height: auto;
-
-}
-
+/*footer stylings*/
 .footer {
   position: fixed;
   left: 0;
@@ -194,7 +206,12 @@ li {
   text-align: right;
 }
 
+/*back to top on footer*/
+.back {
+  text-align: center;
+}
 
+/*media query for tablet*/
 @media (min-width: 768px) and (max-width: 1024px) {
   .card-deck {
     max-width: 100%;
@@ -218,7 +235,7 @@ li {
 }
 
 
-
+/*media query for mobile*/
 @media only screen and (max-width: 768px) {
 
   .nav {
@@ -232,11 +249,5 @@ li {
     align-items: center;
     margin: auto;
     justify-content: center;
-  }
-}
-
-@media (min-width: 576px) {
-  .card-deck {
-    margin-left: 0;
   }
 }

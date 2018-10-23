@@ -1,14 +1,12 @@
 /* Baseline reset */
 html {
   box-sizing: border-box;
-  font-size: 16px;
-}
+  font-size: 16px; }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
-}
+  box-sizing: inherit; }
 
 body {
   color: rgba(0, 0, 0, 0.78);
@@ -17,8 +15,7 @@ body {
   line-height: 1.64rem;
   margin: 0;
   padding: 0;
-  font-family: fira sans;
-}
+  font-family: fira sans; }
 
 h1,
 h2,
@@ -26,57 +23,43 @@ h3,
 h4,
 h5,
 h6 {
-  color: rgba(0, 0, 0, 0.89);
-}
+  color: rgba(0, 0, 0, 0.89); }
 
-/* main article on homepage */
 article {
-  padding: 2rem 1rem;
-}
+  padding: 2rem 1rem; }
 
-/*nav css nested */
+/* All nav stylings/logo/menu items */
 .navbar {
   align-items: center;
   background-color: #e6110a;
   border-bottom: 3px solid #3729ff;
-  height: 60px;
-}
-
-.navbar::before {
-  content: ' ';
-  border-top: 2px solid yellow;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-}
-
-.navbar .logo {
-  flex-grow: 1;
-  height: 100%;
-  align-items: center;
-  display: flex;
-  padding-left: 1rem;
-}
-
-.navbar .logo img {
-  height: calc(100% - 1.5rem);
-  width: auto;
-}
+  height: 60px; }
+  .navbar::before {
+    content: ' ';
+    border-top: 2px solid yellow;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%; }
+  .navbar .logo {
+    flex-grow: 1;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    padding-left: 1rem; }
+    .navbar .logo img {
+      height: calc(100% - 1.5rem);
+      width: auto; }
 
 .nav {
   flex-grow: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100%;
-}
+  height: 100%; }
 
-/*change color of text in nav*/
 a.texty {
-  color: black;
-}
-
+  color: black; }
 
 .menu-item {
   color: #666666;
@@ -88,105 +71,86 @@ a.texty {
   height: 60px;
   line-height: 60px;
   justify-content: center;
-  border-bottom: 2px solid transparent;
-}
+  border-bottom: 2px solid transparent; }
+  .menu-item:hover {
+    background-color: #2e3ed1;
+    color: white;
+    cursor: pointer; }
+  .menu-item.active {
+    border-color: #e8e87d;
+    color: white; }
 
-.menu-item:hover {
-  background-color: #2e3ed1;
-  color: white;
-  cursor: pointer;
-}
-
-.menu-item.active {
-  border-color: #e8e87d;
-  color: white;
-}
-
-/* main body edits*/
+/*body stylings */
 body {
   font-family: fira sans;
-  background-image: url(../../img/backaground2.jpg);
-}
+  background-image: url(../../img/backaground2.jpg); }
 
+/* list/unordered items on the homepage categories */
 ul {
-  font-size: 20px;
-}
+  font-size: 20px; }
 
 li {
-  padding: 10px;
-}
+  padding: 10px; }
 
-/*line break on each page between containers*/
+/* line break on each page between content */
 .break {
   margin-left: 20px;
-  margin-right: 20px;
-}
+  margin-right: 20px; }
 
+/*main article on homepage*/
 .article {
   padding: 20px;
   border: 500px #e79a9a;
   color: white;
   font-size: 20px;
   text-align: center;
-}
+  margin-bottom: 60px; }
 
-/*css for history page*/
-
-/*main container of all divs on history page*/
+/* history page */
+/*full body of hisory page*/
 .whatever {
   margin: auto;
-  width: 80%;
-  height: auto;
-}
+  width: 75%;
+  height: auto; }
 
+/*history class for <p>*/
 .history {
   color: white;
-  text-align: center;
+  text-align: left;
   margin: 20px;
-  margin-bottom: 80px;
-  align-content: center;
-}
+  align-content: left; }
 
-/*video css for history page youtube videos*/
+/*youtube inbedded videos on history page */
 .video-responsive {
   overflow: hidden;
   padding-bottom: 56.25%;
   position: relative;
   height: 0;
-  margin: 40px;
-}
+  margin: 20px; }
 
 .video-responsive iframe {
   left: 0;
   top: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-}
+  height: 80%;
+  width: 80%;
+  position: absolute; }
 
-
-
-/*carousel on homepage*/
+/*carousel bootstrap stlyings*/
 .carousel {
   margin: auto;
   width: 75%;
   height: auto;
   padding: 20px;
   background-color: 3px solid #3729ff;
-  border-radius: 3%;
-}
+  border-radius: 3%; }
 
-
-
-/* bootstrap cards css*/
-
-/*card group in a row*/
+/* bootstrap cards */
+/*group of cards in a row*/
 .card-deck {
   max-width: 100%;
   align-items: center;
   margin: auto;
-  justify-content: center;
-}
+  justify-content: center; }
 
 /*individual card*/
 .card {
@@ -195,32 +159,26 @@ li {
   height: auto;
   padding: 10px;
   align-items: center;
-  border-color: #afc7ee;
-}
+  border-color: #afc7ee; }
 
-/*css for cards of the racers on racers page*/
-.card .racers {
+/*racer class for cards on racer page*/
+.racers {
   width: auto;
-  height: 150px;
+  height: 300px;
   border: 2px solid #e6110a;
-  border-radius: 4%;
-}
+  border-radius: 10%; }
 
-/*images above each card*/
+/*image at the tops of cards*/
 .card-img-top {
-  border-bottom: 3px solid #3729ff;
-}
+  border-bottom: 3px solid #3729ff; }
 
-/*text in body of each card*/
+/*content under the image on card*/
 .card-body {
   width: 90%;
   height: 300px;
-  overflow-x: hidden;
-}
+  overflow-x: hidden; }
 
-
-
-/* footer css */
+/*footer stylings*/
 .footer {
   position: fixed;
   left: 0;
@@ -229,51 +187,37 @@ li {
   background-color: #443131;
   font-size: 10px;
   color: white;
-  text-align: right;
-}
+  text-align: right; }
 
+/*back to top on footer*/
+.back {
+  text-align: center; }
 
-/*media query for tablets */
+/*media query for tablet*/
 @media (min-width: 768px) and (max-width: 1024px) {
   .card-deck {
     max-width: 100%;
     align-items: center;
     margin: auto;
     justify-content: center;
-    margin-left: 0;
-  }
-
+    margin-left: 0; }
   .card-group {
-    overflow: hidden;
-  }
-
+    overflow: hidden; }
   .card {
     width: auto;
     height: auto;
     margin: 20px;
     align-items: center;
-    justify-content: center;
-  }
-}
+    justify-content: center; } }
 
-/*media query for mobile */
+/*media query for mobile*/
 @media only screen and (max-width: 768px) {
   .nav {
-    font-size: 10px;
-  }
-
+    font-size: 10px; }
   .card {
     width: 300px;
     height: 450px;
     margin: 10px;
     align-items: center;
     margin: auto;
-    justify-content: center;
-  }
-}
-
-@media (min-width: 576px) {
-  .card-deck {
-    margin-left: 0;
-  }
-}
+    justify-content: center; } }

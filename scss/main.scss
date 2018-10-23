@@ -4,18 +4,19 @@
 // is applied to the navbar selector
 $bg-color: hsl(2, 92%, 47%);
 $height: 60px;
+$active-color: rgb(255, 255, 0);
 
 /* Add styles here */
 .navbar {
   align-items: center;
   background-color: $bg-color;
-  border-bottom: 3px solid hsl(0, 0%, 94%);
+  border-bottom: 3px solid hsl(244, 100%, 58%);
   display: flex;
   height: $height;
 
   &::before {
     content: ' ';
-    border-top: 2px solid $bg-color;
+    border-top: 2px solid $active-color;
     position: absolute;
     top: 0px;
     width: 100%;
@@ -44,7 +45,7 @@ $height: 60px;
 }
 
 .menu-item {
-  color: darken(desaturate($bg-color, 40%), 20%);
+  color: white;
   flex-grow: 1;
   letter-spacing: 0.5px;
   text-align: center;
@@ -60,16 +61,17 @@ $height: 60px;
 
   // menu item .active is a class name in html while :hover is a pseudo class
   &:hover {
-    background-color: hsl(234, 83%, 52%);
+    background-color: hsl(234, 95%, 57%);
     cursor: pointer;
   }
 
   &.active {
-    border-color: lighten(desaturate($bg-color, 30%), 20%);
+    border-color: lighten(desaturate($active-color, 30%), 20%);
   }
 }
 
-.body {
+
+body {
   font-family: fira sans;
   background-image: url(../../img/backaground2.jpg);
 }
@@ -98,12 +100,8 @@ $height: 60px;
 /* cards */
 
 .card {
-  margin: 20px;
+  margin: 10px;
   align-items: center;
-
-  .card-deck {
-    padding: 20px;
-  }
 
   .racers .card-img-top {
     width: 200px;
@@ -113,7 +111,8 @@ $height: 60px;
 }
 
 @media screen and (max-width: 720px) {
-  .card {
+  .racers .card {
     display: block;
   }
+
 }

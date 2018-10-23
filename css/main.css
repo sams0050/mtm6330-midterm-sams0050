@@ -32,12 +32,12 @@ article {
 .navbar {
   align-items: center;
   background-color: #e6110a;
-  border-bottom: 3px solid #f0f0f0;
+  border-bottom: 3px solid #3729ff;
   display: flex;
   height: 60px; }
   .navbar::before {
     content: ' ';
-    border-top: 2px solid #e6110a;
+    border-top: 2px solid yellow;
     position: absolute;
     top: 0px;
     width: 100%; }
@@ -59,7 +59,7 @@ article {
   height: 100%; }
 
 .menu-item {
-  color: #692321;
+  color: white;
   flex-grow: 1;
   letter-spacing: 0.5px;
   text-align: center;
@@ -70,12 +70,12 @@ article {
   justify-content: center;
   border-bottom: 2px solid transparent; }
   .menu-item:hover {
-    background-color: #1f33ea;
+    background-color: #293efa;
     cursor: pointer; }
   .menu-item.active {
-    border-color: #df7a77; }
+    border-color: #e8e87d; }
 
-.body {
+body {
   font-family: fira sans;
   background-image: url(../../img/backaground2.jpg); }
 
@@ -98,15 +98,13 @@ article {
 
 /* cards */
 .card {
-  margin: 20px;
+  margin: 10px;
   align-items: center; }
-  .card .card-deck {
-    padding: 20px; }
   .card .racers .card-img-top {
     width: 200px;
     height: 150px;
     border: 2px solid #e09898; }
 
 @media screen and (max-width: 720px) {
-  .card {
+  .racers .card {
     display: block; } }
